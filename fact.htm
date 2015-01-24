@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Facts Factsheet, by forgesource</title>
+        <link rel="stylesheet" href="bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-theme.css">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="fact.js"></script>
+        <script type="text/javascript">
+            google.load("visualization", "1", {packages:["corechart"]});
+            google.setOnLoadCallback(drawChart);
+            function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Item', 'Units'],
+              ['Made Up on the Spot',     85],
+              ['Not Made Up on the Spot',      100 - 85]
+            ]);
+            var options = {
+              title: 'Facts',
+              is3D: true,
+              slices: {  0: {offset: 0.2},
+              },
+            };
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+            }
+        </script>
+    </head>
+    
+    <body>
+        <h1>A Statistical Survey of the Frequency of Facts which are Made Up on the Spot</h1>
+        <p>85 of every 100 Facts are Made Up on the Spot</p>
+        <div class="pull-left">
+            <div id="piechart" style="width: 500px; height: 400px" class="thumbnail"></div>
+            <div style="padding:0px 30px" class="caption">
+                <h3 style="padding:0px">Caption Title</h3>
+                <p class="small"><Some>text in the caption</Some></p>
+            </div></div>
+        <h2>1. Poststructuralist construction and capitalist subcultural theory</h2>
+        <p>In the works of Fellini, a predominant concept is the distinction between without and within. Debord uses the term ‘deconstructive pretextual theory’ to denote a mythopoetical totality.</p>
+
+        
+        <button id="generate">Generate</button>
+        <div id="generated_title"></div>
+        </br>
+        <div id="thing"></div>
+
+
+        wait <span class="myClass">hello</span> this is some text <span id="somevar" class="thing"> this </span> is more
+        
+        
+        
+        
+        
+        
+    </body>
+</html>
